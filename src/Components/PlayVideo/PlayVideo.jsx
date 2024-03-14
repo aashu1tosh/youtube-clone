@@ -35,6 +35,58 @@ const PlayVideo = () => {
 
             <button>Subscribe</button>
         </div>
+
+        <div className="vid-description">
+            <p>Channel about cars adn fun</p>
+            <p>Subscrive the channel please</p>
+
+            <hr />
+            <h4>130 Comments</h4>
+
+            <div className="comment">
+                <img src={user_profile} alt="" />
+                <div>
+                    <h3>Jack Dorsey <span>0ne day ago</span></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat vero natus laborum omnis culpa adipisci odit facilis quo at?</p>
+                    <div className="comment-action">
+                        <img src={like} alt="" />
+                        <span>244</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div className="comment">
+                <img src={user_profile} alt="" />
+                <div>
+                    <h3>Jack Dorsey <span>One day ago</span></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat vero natus laborum omnis culpa adipisci odit facilis quo at?</p>
+                    <div className="comment-action">
+                        <img src={like} alt="" />
+                        <span>244</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div className="comment">
+                <img src={user_profile} alt="" />
+                <div>
+                    <h3>Jack Dorsey <span>one day ago</span></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel fugiat vero natus laborum omnis culpa adipisci odit facilis quo at?</p>
+                    <div className="comment-action">
+                        <img src={like} alt="" />
+                        <span>244</span>
+                        <img src={dislike} alt="" />
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
     </div>
   )
 }
