@@ -35,8 +35,8 @@ const PlayVideo = ({ videoId }) => {
             <div className="play-video-info">
                 <p> {apiData? valueConvertor(apiData.statistics.viewCount): "Views"} &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow().toUpperCase(): "Uploaded Date"}</p>
                 <div>
-                    <span><img src={like} alt="" />125</span>
-                    <span><img src={dislike} alt="" />2</span>
+                    <span><img src={like} alt="" />{apiData? valueConvertor(apiData.statistics.likeCount): "like"}</span>
+                    <span><img src={dislike} alt="" /></span>
                     <span><img src={share} alt="" />Share</span>
                     <span><img src={save} alt="" />Save</span>
                 </div>
@@ -46,7 +46,7 @@ const PlayVideo = ({ videoId }) => {
             <div className="publisher">
                 <img src={jack} alt="" />
                 <div>
-                    <p>Mr. Beast</p>
+                    <p>{apiData ? apiData.snippet.channelTitle: "Unavialble"}</p>
                     <span>1B subscribers</span>
                 </div>
 
@@ -54,11 +54,11 @@ const PlayVideo = ({ videoId }) => {
             </div>
 
             <div className="vid-description">
-                <p>Channel about cars adn fun</p>
-                <p>Subscrive the channel please</p>
+                <p>{apiData ? apiData.snippet.description.slice(0,250) : "Description Unavailable"}</p>
+
 
                 <hr />
-                <h4>130 Comments</h4>
+                <h4>{apiData ? valueConvertor(apiData.statistics.commentCount) :"Unavilable"} Comments</h4>
 
                 <div className="comment">
                     <img src={user_profile} alt="" />
