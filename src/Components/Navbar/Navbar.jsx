@@ -7,6 +7,7 @@ import more_icon from '../../assets/more.png'
 import notification_icon from '../../assets/notification.png'
 import profile_icon from '../../assets/jack.png'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = ({setSidebar}) => {
 
@@ -19,7 +20,7 @@ const Navbar = ({setSidebar}) => {
         <nav className='flex-div'>
             <div className="nav-left flex-div">
                 <img  onClick={()=> setSidebar(prev => prev ? false: true)} className='menu-icon' src={menu_icon} alt="" />
-                <img className='logo' src={logo} alt="" />
+                <Link to='/'><img className='logo' src={logo} alt="" /></Link>
             </div>
 
             <div className='nav-middle flex-div'>
