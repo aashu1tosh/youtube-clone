@@ -1,12 +1,13 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Feed.css'
 
 
+import moment from 'moment'
 import { Link } from 'react-router-dom'
 import { API_KEY, valueConvertor } from '../../data'
-import moment from 'moment'
 
 
+// eslint-disable-next-line react/prop-types
 const Feed = ({ category }) => {
 
     const [data, setData] = useState([]);
@@ -24,11 +25,11 @@ const Feed = ({ category }) => {
         <div className="feed">
             {data.map((item, index) => {
                 return (
-                    <Link to={`video/${item.snippet.categoryId}/${item.id}`} className='card'>
+                    <Link to={`video/${item.snippet.categoryId}/${item.id}`} className='card' key={index}>
                         <img src={item.snippet.thumbnails.medium.url} alt="" />
                         <h2>{item.snippet.title}</h2>
                         <h3>{item.snippet.channelTitle}</h3>
-                        <p>{ valueConvertor(item.statistics.viewCount)} &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
+                        <p>{valueConvertor(item.statistics.viewCount)} &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
                     </Link>
                 )
             })}

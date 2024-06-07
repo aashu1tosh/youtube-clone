@@ -5,6 +5,7 @@
     position: fixed;
     padding-left: 2%;
     padding-top: 30px;
+    min-width: 190px;
 }
 
 .shortcut-links img {
@@ -49,15 +50,17 @@
 .small-sidebar p {
     display: none;
 }
+
 .small-sidebar h3 {
     display: none;
 }
+
 .small-sidebar hr {
     width: 50%;
     margin-bottom: 25px;
 }
 
-.side-links.active img{
+.side-links.active img {
     padding-bottom: 2px;
     border-bottom: 3px solid red;
 }
@@ -66,6 +69,7 @@
     .sidebar {
         display: none;
     }
+
     .small-sidebar {
         display: none;
     }
